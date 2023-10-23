@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--Use validator.w3.org for validating HTML
+jigsaw.w3.org for validating CSS
+https://www.w3schools.com/cssref/index.php for CSS properties-->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="HTML, CSS">
+		<meta name="description" content="The home page of the innovative service Lefties.">
+		<title>Lefties</title>
+		<link rel="icon" href="icon.png">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style-footer.css">
+  		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"><!-- For social media icons -->
+	</head>
+	<body>
+		<div class="first-bg">
+			<div class="navbar" id="overlay">
+				<img src="logo.png" alt="Image not displayed properly" class=logo>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#anp">Donate</a></li>
+					<li><a href="about.html">About Us</a></li>
+				</ul>
+			</div>
+
+			<div class="content">
+					<h1><img src="heading.png" alt="Lefties"></h1>
+					<div class=slogan>
+						<p>Join us in feeding hope and saving excess</p><p>·</p><p>Empower Compassion</p><p>·</p><p>Nourish Lives</p>
+					</div>
+
+					<div>
+						<button type="button" onclick="window.open('https://x.thunkable.com/copy/42f1afeb30ecf6f1d14bbe71f94b9127', '_blank')"><span class='span-button'></span>GET THE APP</button> <!-- Span fills up inside the button upon hovering -->
+					</div>
+			</div>
+		</div>
+
+
+
+		<div class="sec-bg" id="anp">
+			<div class="container">
+				<!-- <img src="donate-img.png"> -->
+
+			    <form action="">
+
+			        <div class="row">
+
+			            <div class="col">
+
+			                <h3 class="title">billing address</h3>
+
+			                <div class="inputBox">
+			                    <span>full name :</span>
+			                    <input type="text" placeholder="">
+			                </div>
+			                <div class="inputBox">
+			                    <span>email :</span>
+			                    <input type="email" placeholder="">
+			                </div>
+			                <div class="inputBox">
+			                    <span>address :</span>
+			                    <input type="text" placeholder="Room - Street - Locality">
+			                </div>
+			                <div class="inputBox">
+			                    <span>city :</span>
+			                    <input type="text" placeholder="">
+			                </div>
+
+			                <div class="flex">
+			                    <div class="inputBox">
+			                        <span>state :</span>
+			                        <input type="text" placeholder="">
+			                    </div>
+			                    <div class="inputBox">
+			                        <span>zip code :</span>
+			                        <input type="text" placeholder="">
+			                    </div>
+			                </div>
+
+			            </div>
+
+			            <div class="col">
+
+			                <h3 class="title">donation</h3>
+
+			                <div class="inputBox">
+			                    <span>cards accepted :</span>
+			                    <img src="card_img.png" alt="Error displaying image">
+			                </div>
+			                <div class="inputBox">
+			                    <span>name on card :</span>
+			                    <input type="text" placeholder="">
+			                </div>
+			                <div class="inputBox">
+			                    <span>credit card number :</span>
+			                    <input type="number" placeholder="">
+			                </div>
+			                <div class="inputBox">
+			                    <span>exp month :</span>
+			                    <input type="text" placeholder="">
+			                </div>
+
+			                <div class="flex">
+			                    <div class="inputBox">
+			                        <span>exp year :</span>
+			                        <input type="number" placeholder="">
+			                    </div>
+			                    <div class="inputBox">
+			                        <span>CVV :</span>
+			                        <input type="text" placeholder="">
+			                    </div>
+			                </div>
+
+			            </div>
+			    
+			        </div>
+
+			        <input type="submit" value="proceed to checkout" class="submit-btn">
+
+			    </form>
+
+			</div>
+		</div>
+
+
+		<!-- Footer -->
+
+		<footer class="footer">
+			<div class="footer-container">
+				<div class="footer-row">
+					<div class="footer-col">
+						<h4>about us</h4>
+						<ul>
+							<li><a href="about.html#om">our mission</a></li>
+							<li><a href="about.html#os">our story</a></li>
+							<li><a href="about.html#oa">our approach</a></li>
+							<li><a href="about.html#oi">our impact</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h4>company</h4>
+						<ul>
+							<li><a href="contact.html">contact us</a></li>
+							<li><a href="about.html#vol">be a volunteer</a></li>
+							<li><a href="#">our sponsors</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h4>shipping</h4>
+						<ul>
+							<li><a href="https://x.thunkable.com/copy/42f1afeb30ecf6f1d14bbe71f94b9127" target="_blank">order status</a></li>
+							<li><a href="https://x.thunkable.com/copy/42f1afeb30ecf6f1d14bbe71f94b9127" target="_blank">high shelf life menu</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h4>follow us</h4>
+						<div class="social-links">
+							<a href="#"><i class="fab fa-facebook-f"></i></a>
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="#"><i class="fab fa-linkedin-in"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+		<script src="script.js"></script>
+	</body>
+</html>

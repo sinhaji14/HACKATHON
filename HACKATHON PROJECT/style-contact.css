@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap'); /*Importing font*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&family=News+Cycle:wght@700&family=Oswald:wght@700&display=swap');
+
+*{ /* Universal selector for CSS reset*/
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /*Relative units and sizes calculated according to border size*/
+	font-family: sans-serif;
+	color: papayawhip;
+}
+
+body{
+	background-color: #000;
+	color: #fff;
+	font-family: gabarito;
+}
+
+.navbar{
+	position: fixed; /*So it always moves while scrolling*/
+
+	height: 150px; /*Fixed height*/
+	width: 100%;
+	padding: 1.5% 3% 1.5% 3%;
+
+	display: flex; /*Makes flexible-container/flexbox for ease of use. flex-direction is 'row' by default*/
+	flex-wrap: wrap;
+	align-items: center; /*Aligns flexbox's items vertically*/
+	justify-content: space-between; /*Aligns flexbox's items horizontally*/
+
+	z-index: 1; /*Above other page elements*/
+
+	background-color: rgba(0,0,0,0.8); /* Default background color */
+}
+
+.logo{
+	width: 120px; /*Absolute value; doesn't change with changes in viewport*/
+	cursor: crosshair;
+}
+
+.navbar ul li{
+	list-style: none; /*Gets rid of list pointers.*/
+	display: inline-block; /*Creating inline-level block container; we can adjust the dimensions*/
+	margin: 0 20px;
+	position: relative; /*Element is positioned relative to its usual/normal position
+	Relative to this normal position, the animation is created.*/
+}
+
+.navbar ul li a{
+	text-decoration: none; /*Removes underline from links*/
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.navbar ul li a:focus{
+	color: silver;
+}
+
+.navbar ul li::after{ /*bookmark*/
+	content: '';
+	height: 0.3rem;
+	width: 0;
+	background: #FF2D00;
+	position: absolute;
+	left: 0;
+	bottom: -0.5rem;
+	transition: 0.5s;
+}
+
+.navbar ul li:hover::after{ /*bookmark*/
+	width: 100%;
+}
+
+
+
+section{
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	height: 100vh;
+	margin-inline: 3%;
+
+	gap: 3rem;
+
+	overflow: hidden;
+}
+
+.hidden{
+	opacity: 0;
+	filter: blur(5px);
+/*	transform: translateX(-20%);*/
+
+	transition: all 3s;
+}
+
+.show{
+	opacity: 1;
+	filter: blur(0);
+/*	transform: translateX(0);*/
+}
+
+@media(prefers-reduced-motion) {
+	.hidden {
+		transition: none;
+	}
+}
+
+
+
+h1, h2{
+	margin-top: 150px; /*To avoid header*/
+	font-family: Oswald;
+	font-size: 4rem;
+	text-transform: uppercase;
+}
+
+p {
+	font-family: Montserrat;
+	font-size: 2rem;
+}
+
+
+
+.vol-container {
+	display: inline-flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.vol-button {
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+}
+
+.vol-button:hover {
+    background-color: #45a049;
+}
+
+
+
+
+/*Footer*/
+
+.footer-container{
+	font-family: 'Poppins';
+	max-width: 1170px;
+	margin:auto;
+
+}
+.footer-row{
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
